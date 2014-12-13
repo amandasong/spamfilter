@@ -5,17 +5,19 @@ Programming Project 5
 November 27th, 2013
 
 Amanda Song (UNI: as4513)
+
+Contents:
 ------------------------------------------------------------------------
-
-CONTENTS: 1. SPAM FILTER 
-	   2. ADDRESS FINDER (extra credit)
+1. Spam filter
+2. Address finder
 		  
 		  
 =========================================================================
-PROGRAM: SPAM FILTER
+SPAM FILTER
 =========================================================================
 
----- How to run the program: --------------------------------------------
+How to run the program:
+------------------------------------------------------------------------
 
 Command-line arguments:
 
@@ -25,12 +27,16 @@ Command-line arguments:
 	args[3]: output (text file)
 	
 	
-----1. List of classes------------------------------------------------------
+List of classes
+------------------------------------------------------------------------
+
 
 Main class: SpamTest
 Supporting classes: Message, Filter, StringParser
 
-----2. Design choices ------------------------------------------------------
+Design choices
+------------------------------------------------------------------------
+
 
 I decided to create another class, StringParser, to handle all the main 
 parsing of the email messages, to identify where each message started,
@@ -61,7 +67,8 @@ against the lists of the keywords and blacklist emails, by retrieving
 each element in each list.
 
 
-----3. Description of how the program works  --------------------------------
+Description of how the program works
+------------------------------------------------------------------------
 
 The main class, SpamTest, creates a Filter object and StringParser object,
 and then reads the command-line arguments, and passes the first two arguments
@@ -102,22 +109,25 @@ two textfiles, args[0], args[1], effectively updating
 their contents.
 
 =========================================================================
-PROGRAM: ADDRESS FINDER
+ADDRESS FINDER
 =========================================================================
 
-
----- How to run the program: ----------------------------------------------
+How to run the program:
+------------------------------------------------------------------------
 
 Command-line arguments:
 
 args[0]: output of emails (textfile)
 
-----1. List of classes------------------------------------------------------
+List of classes
+------------------------------------------------------------------------
+
 
 Main class: AddressFinderTest
 Supporting class: AddressFinder
 
-----2. Design choices ------------------------------------------------------
+Design choices
+------------------------------------------------------------------------
 
 To find email addresses, I matched the content of a webpage against the
 regular expression for email (I used the regex from the site
@@ -131,7 +141,8 @@ with-regular-expression/).
 To keep track the email addresses found, I created an ArrayList of strings,
 which is updated with new addresses.
 
-----3. Description of program ----------------------------------------------
+Description of program
+------------------------------------------------------------------------
 
 The main class takes the URL of a website, and passes it to the ArrayFinder
 class to search for email addresses, as well as additional hyperlinks. 
